@@ -1,15 +1,24 @@
-// AI-Assisted Arduino LED Blinking Program
+// Use Arduino's built-in LED pin
+const int ledPin = LED_BUILTIN;
 
-int ledPin = LED_BUILTIN;
+// LED ON/OFF duration in milliseconds
+const int blinkDelay = 1000;
 
 void setup() {
+  // Configure the LED pin as an output
   pinMode(ledPin, OUTPUT);
 }
 
 void loop() {
+  // Turn the LED ON
   digitalWrite(ledPin, HIGH);
-  delay(1000);
 
+  // Keep the LED ON for approximately 1 second
+  delay(blinkDelay);
+
+  // Turn the LED OFF
   digitalWrite(ledPin, LOW);
-  delay(1000);
+
+  // Keep the LED OFF for approximately 1 second
+  delay(blinkDelay);
 }
